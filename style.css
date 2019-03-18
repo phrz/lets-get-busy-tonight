@@ -138,13 +138,15 @@ body {
 	}
 }
 
-@media only screen and (min-resolution: 1.25dppx) {
+@media only screen and (min-resolution: 1.25dppx), 
+only screen and (-webkit-min-device-pixel-ratio: 2) {
 	/* 2x */
 	.btb { background-image: url(img/buy-tickets@2x.png); }
 	.btb:hover, .btb:focus { background-image: url(img/buy-tickets-on@2x.png); }
 }
 
-@media only screen and (min-resolution: 2.25dppx) {
+@media only screen and (min-resolution: 2.25dppx),
+only screen and (-webkit-min-device-pixel-ratio: 3) {
 	/* 3x */
 	.btb { background-image: url(img/buy-tickets@3x.png); }
 	.btb:hover, .btb:focus { background-image: url(img/buy-tickets-on@3x.png); }
