@@ -106,7 +106,7 @@ body {
 }
 
 .btt {
-	color: transparent;
+	visibility: hidden;
 }
 
 .site-footer {
