@@ -1,0 +1,151 @@
+@font-face {
+	font-family: lgbtexo2;
+	src: url('fonts/Exo2-Regular.woff2') format('woff2'),
+	url('fonts/Exo2-Regular.otf') format('opentype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: lgbtexo2;
+	src: url('fonts/Exo2-SemiBold.woff2') format('woff2'),
+	url('fonts/Exo2-SemiBold.otf') format('opentype');
+	font-weight: 600; /* semibold */
+}
+
+@keyframes colors {
+	0% {
+		background-color: #e40303; /* R */
+	}
+	16.666% {
+		background-color: #ff8c00; /* O */
+	}
+	33.333% {
+		background-color: #ffed00; /* Y */
+	}
+	50% {
+		background-color: #008026; /* G */
+	}
+	66.666% {
+		background-color: #004dff; /* B */
+	}
+	83.333% {
+		background-color: #750787; /* V */
+	}
+	100% {
+		background-color: #e40303; /* R */
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+
+	background: red;
+	animation-name: colors;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: forward;
+}
+
+body {
+	font-family: lgbtexo2;
+	font-weight: 600;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 30px;
+}
+
+.prompt {
+	max-width: 30rem;
+	font-size: 1.5rem;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hero {
+	max-width: 100%;
+	height: auto;
+}
+
+.hero, .btb {
+	margin: 30px auto;
+	display: block;
+}
+
+.btb {
+	width: 255px;
+	height: 68px;
+	padding: 0;
+	background: url(img/buy-tickets.png) no-repeat top left / 255px 68px;
+	border: 0;
+	flex-shrink: 0;
+}
+
+.btb:hover, .btb:focus {
+	background-image: url(img/buy-tickets-on.png);
+}
+
+.btt {
+	color: transparent;
+}
+
+.site-footer {
+	width: 100%;
+	font-size: 1rem;
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	margin: 30px 0;
+	text-align: center;
+}
+
+.inline-logo {
+	margin: 10px auto;
+}
+
+@media only screen and (min-width: 800px) {
+	html {
+		font-size: 25px;
+	}
+	.site-footer {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.site-footer .l, .site-footer .r {
+		flex-basis: 50%;
+	}
+	.site-footer .l {
+		text-align: right;
+	}
+	.site-footer .r {
+		text-align: left;
+	}
+	.inline-logo {
+		display: inline-block;
+		margin: 0 40px;
+		vertical-align: middle;
+	}
+}
+
+@media only screen and (min-resolution: 1.25dppx) {
+	/* 2x */
+	.btb { background-image: url(img/buy-tickets@2x.png); }
+	.btb:hover, .btb:focus { background-image: url(img/buy-tickets-on@2x.png); }
+}
+
+@media only screen and (min-resolution: 2.25dppx) {
+	/* 3x */
+	.btb { background-image: url(img/buy-tickets@3x.png); }
+	.btb:hover, .btb:focus { background-image: url(img/buy-tickets-on@3x.png); }
+}
